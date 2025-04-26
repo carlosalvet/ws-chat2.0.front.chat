@@ -4,6 +4,7 @@ async function init_chat(chat_id){
     try {
         ws_chat = new WS_ChatController("ws-chat").__init__();
         ws_chat.set_status('Conectando...')
+        ws = await ws_connect(SERVER_ADDRESS);
     } catch (_error){
         console.error("Error crítico:", _error);
     }
