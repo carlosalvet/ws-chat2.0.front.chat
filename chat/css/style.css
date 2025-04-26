@@ -1,0 +1,143 @@
+#ws-chat {
+  padding-top: 15px;
+  max-width: 710px;
+}
+
+#ws-chat, .ws-post, .ws-window{
+	border-radius: 15px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.ws-btn{
+    cursor: pointer; 
+}
+
+
+.ws-container {
+  padding-left: 20px;
+  padding-right: 15px;
+}
+.ws-window {
+  overflow: scroll;
+  padding-top: 6px;
+  padding-left: 10px;
+  padding-right: 6px;
+  padding-bottom: 15px;
+  height: 410px;
+}
+.ws-image {
+  display: inline-block;
+  width: 60PX;
+  vertical-align: bottom;
+}
+.ws-post-right {
+  display: inline-block;
+  margin-left: 10px;
+  width: 87%;
+  text-align: justify;
+}
+.ws-post-date {
+  text-align: right;
+  display: inline-block;
+}
+.ws-post {
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  margin-right: 15px;
+  margin-left: 20px;
+}
+
+.ws-title {
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+.ws-title div{
+  display: inline-block;
+}
+.ws-notificacion-screen {
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #ccf1f9;
+}
+div {
+}
+.ws-bottom {
+  margin-top: 30px;
+}
+.buttons-wrapper button {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.buttons-wrapper {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  width: 100%;
+}
+.ws-buttons {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ws-btn-green {
+  background-color: #7db900;
+  color: white;
+  border-color: #61931d;
+}
+
+.ws-btn-gray {
+  background-color: #495064;
+  color: white;
+  border-color: #2d3246;
+}
+
+.ws-btn-red {
+  background-color: #e41c47;
+  color: white;
+  border-color: #ce0f38;
+}
+
+.ws-btn-violet {
+  background-color: #6644b6;
+  color: white;
+  border-color: #503198;
+  border-radius: 0px 7px 7px 0px !important;
+}
+
+.ws-btn {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 7px;
+
+}
+
+.border-shadow {
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.15), inset 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.ws-txt {
+  height: 31px;
+}
+
+.post-title-admin {
+  display: inline-block;
+  font-size: 1.05em;
+  font-weight: bold;
+  font-stretch: condensed;
+}
+
+.hidden {
+  display: none;
+}
+
+.vhidden {
+  visibility: hidden;
+}
