@@ -73,39 +73,14 @@
 
 <script src="chat/js/doms/WS_SelectionButtons.js"></script>
 
+<script src="chat/js/functionalities/callbacks.js"></script>
 
-
-
-<!--
 <script src="js/websocket/settings.js"></script>
 <script src="js/websocket/connection/ws_connect.js"></script>
 <script src="js/websocket/events/websocket.js"></script>
 
-<script src="chat/js/functionalities/callbacks.js"></script>
-<script src="js/doms/WS_AuthCitizenInterface.js"></script>
-<script src="js/doms/WS_AuthExpertInterrface.js"></script>
-<script src="js/doms/WS_MessageDOM.js"></script>
 
 
-<script src="js/models/WS_User.js"></script>
-<script src="js/models/WS_Message.js"></script>
-
-
-<script src="js/helpers/Comp_MsgAdminHelper.js"></script>
-<script src="js/helpers/WS_MessageHelper.js"></script>
-
-
-
-<script src="js/controllers/WS_MessageController.js"></script>
-
-<script src="js/reacts/chat_get.js"></script>
-<script src="js/reacts/user_login.js"></script>
-<script src="js/reacts/message_send.js"></script>
-
-
-<script src="js/events/sessions.js"></script>
-<script src="js/events/ws-requests.js"></script>
--->
 
 
 <script>
@@ -113,5 +88,5 @@
     let node_chat = dom_get_node('#ws-chat')
     let chat_id = node_chat.querySelector('input[name=chat-id]').value
 
-    //init_chat(chat_id)
+    init_chat(chat_id)
 </script>
