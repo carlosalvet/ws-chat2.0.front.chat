@@ -1,6 +1,6 @@
 async function init_chat(chat_id){
     let request_id = 0
-    var ws = null
+    ws = null
     try {
         ws_chat = new WS_ChatController("ws-chat").__init__();
         ws_chat.set_status('Conectando...')
@@ -28,4 +28,19 @@ function send_request_conversation (_ws, chat_id=0) {
     console.log(`Sending in get chat: "${strheader}"`, );
     _ws.send(strheader);
     return request_id
+}
+
+function authenticate_citizen(ws){
+    txt_input = WS_SelectionButtons['auth-citizen']
+    citizen_name = txt_input.querySelector('input[name=guess-name]').value
+
+    let arr_send = ['event','name', 'user-role']
+    arr_send['event'] = 'user-login'
+    arr_send['name'] = citizen_name
+    arr_send['user-role'] = 'citizen'
+    strheader = parse_request(arr_send)
+    console.log('[DEBUG]', 'preparing string to send citizen auth:', strheader)
+
+    ws.send(strheader);
+    delete arr_send
 }
