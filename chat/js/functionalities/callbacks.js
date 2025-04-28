@@ -44,3 +44,17 @@ function authenticate_citizen(ws){
     ws.send(strheader);
     delete arr_send
 }
+
+
+function authenticate_expert(ws){
+    let arr_send = []
+    arr_send['event'] = 'user-login'
+    arr_send['user-name'] = WS_SelectionButtons['auth-expert'].querySelector('input[name=expert-name]').value
+    arr_send['user-pass'] = WS_SelectionButtons['auth-expert'].querySelector('input[name=expert-pass]').value
+    arr_send['user-role'] = 'expert'
+
+    strheader = parse_request(arr_send)
+    console.log('[DEBUG]', 'preparing string to send expert auth:', strheader)
+    ws.send(strheader);
+    delete arr_send
+}

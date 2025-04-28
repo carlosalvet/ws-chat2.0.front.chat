@@ -10,7 +10,7 @@ function user_login(session, response){
     if (response.status == '200'){
         session['logged'] = true
         WS_Message.date = '2022-06-30'
-        WS_Message.image = 'images/admin-avatar.png'
+        WS_Message.image = 'chat/images/admin-avatar.png'
         WS_Message.username = response['user-role']
         
 
