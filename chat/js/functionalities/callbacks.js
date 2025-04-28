@@ -42,5 +42,13 @@ function authenticate_citizen(ws){
     console.log('[DEBUG]', 'preparing string to send citizen auth:', strheader)
 
     ws.send(strheader);
-    delete arr_send
+    delete arr_send 
+}
+
+function api_send_message(btn_submit, _ws) {
+    session['event'] = 'message-send'
+    message = btn_submit.parentNode.querySelector('input[type=text]')
+	strheader = parse_request(session, message.value)
+    console.log('str to send:', strheader)
+    _ws.send(strheader);
 }
