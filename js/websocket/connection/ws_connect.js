@@ -1,16 +1,5 @@
 /* WebSocket. */
 var ws;
-var session = { 
-    'session-name':"", 
-    'logged':false, 
-    'user-rol':"",
-    'chat-id':'2',
-    'chat-date':'2022-06-30',
-    'chat-description':'¿Estas hart@ de que te peguen?',
-    'chat-title':'Violencia Familiar',
-}
-
-
 /* Establish connection. */
 async function ws_connect(addr)
 {
