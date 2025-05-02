@@ -1,21 +1,11 @@
 /* WebSocket. */
-var ws;
-var session = { 
-    'session-name':"", 
-    'logged':false, 
-    'user-rol':"",
-    'chat-id':'2',
-    'chat-date':'2022-06-30',
-    'chat-description':'¿Estas hart@ de que te peguen?',
-    'chat-title':'Violencia Familiar',
-}
+var ws = null;
+var session = null;
 
-
-/* Establish connection. */
 async function ws_connect(addr)
 {
     return await new Promise((resolve, reject) => {
-        const ws = new WebSocket(addr);
+        ws = new WebSocket(addr);
         ws.onmessage = function (event) { ws_onmessage(this, event) };
         ws.onclose = function(event) { ws_onclose(this, event) };
 
@@ -27,7 +17,7 @@ async function ws_connect(addr)
 
         ws.onopen = (event) => { 
             clearTimeout(timeout_id);
-            ws_open(ws_chat)
+            ws_open()
             resolve(ws) 
         };
         ws.onerror = (error) => {
