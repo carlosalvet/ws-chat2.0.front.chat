@@ -1,5 +1,11 @@
 "use strict";
 
+PREFIX_FUNCT = 'react_'
+
+function get_prefix_funct(){
+    return PREFIX_FUNCT
+}
+
 
 function get_value(element, type){
     if (!type) type='str'
