@@ -4,7 +4,7 @@ var ws;
 async function ws_connect(addr)
 {
     return await new Promise((resolve, reject) => {
-        const ws = new WebSocket(addr);
+        ws = new WebSocket(addr);
         ws.onmessage = function (event) { __ws_onmessage(this, event) };
         ws.onclose = function(event) { ws_onclose(this, event) };
 
@@ -16,7 +16,7 @@ async function ws_connect(addr)
 
         ws.onopen = (event) => { 
             clearTimeout(timeout_id);
-            ws_open(ws_chat)
+            ws_open()
             resolve(ws) 
         };
         ws.onerror = (error) => {
@@ -32,6 +32,7 @@ async function ws_connect(addr)
 /* On message react calling a event function*/
 function __ws_onmessage(ws, evt){
     response = JSON.parse(evt.data)
+    session = get_session()
     console.log('ws_onmessage: response petition', response['event'], response)
 
     prefix_funct = get_prefix_funct()

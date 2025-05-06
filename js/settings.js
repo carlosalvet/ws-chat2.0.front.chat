@@ -1,9 +1,14 @@
 "use strict";
 
-PREFIX_FUNCT = 'react_'
+var PREFIX_FUNCT = 'react_'
+var SESSION = {}
 
 function get_prefix_funct(){
     return PREFIX_FUNCT
+}
+
+function get_session(){
+    return SESSION
 }
 
 
