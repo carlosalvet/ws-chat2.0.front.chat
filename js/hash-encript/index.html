@@ -1,0 +1,25 @@
+<html>
+<head>
+<script src="sjcl.js"></script>
+</head>
+<body>
+
+</body>
+
+<script>
+'use-strict'
+
+function hash_sha256(_str){
+  const myBitArray = sjcl.hash.sha256.hash(_str)
+  const myHash = sjcl.codec.hex.fromBits(myBitArray)
+  return myHash
+
+}
+
+
+const my_str = 'Hello'
+hash_str = hash_sha256(my_str)
+console.log('hash string: ', hash_str)
+console.log('count characters: ', hash_str.length)
+</script>
+</html>
