@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Estado de chat</title>
+
+	</head>
+	<body>
+		<div id="content">Connectando...</div>
+		<input type="submit" onclick="get_chat_data(ws)" id="data" value="Buscar">
+		<label for="chat">Id chat</label><br>
+		<select id="idchat" value="idchat">
+			<option value="0">Seleccionar chat</option>
+		  	<option value="Contratos">5</option>
+		  	<option value="2">2</option>
+		  	<option value="3">3</option>
+		</select>
+		<br>
+		<input type="button" onclick="delete_chat(ws)" id="close" value="Cerrar">
+		<input type="button" onclick="destroy_chat(ws)" id="destroy" value="Eliminar">
+		
+		
+	</body>	
+
+	<script src="../js/settings.js"></script>
+	<script src="../js/websocket/settings.js"></script>
+	<script src="../js/websocket/connection/ws_connect.js"></script>
+
+	<script src="js/reacts/websocket-callbacks.js"></script>
+	<script src="js/functionalities/websocket.js"></script>
+
+	<script src="js/reacts/chat.js"></script>
+	<script src="js/events/chat.js"></script>
+
+	<script>
+		connect_websocket()
+	</script>
+
+</html>
