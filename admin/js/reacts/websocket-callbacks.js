@@ -1,7 +1,7 @@
 //Super Global variable session
-
 function ws_open(ws, timeout_id){
   console.log('Changing status: Conectado', '[OK]');
+  document.getElementById('content').innerText = 'CONECTADO'
   return ws
 }
 
